@@ -28,139 +28,125 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.label1 = new System.Windows.Forms.Label();
-			this.LocationTextBox = new System.Windows.Forms.TextBox();
-			this.OpenFileButton = new System.Windows.Forms.Button();
-			this.HashFunctionComboBox = new System.Windows.Forms.ComboBox();
-			this.label2 = new System.Windows.Forms.Label();
-			this.HashFileButton = new System.Windows.Forms.Button();
-			this.HashValueTextBox = new System.Windows.Forms.TextBox();
-			this.CopyButton = new System.Windows.Forms.Button();
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChecksumForm));
+			this.MenuStrip = new System.Windows.Forms.MenuStrip();
+			this.FileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.hashFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.compareToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.viewsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.settingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.MainPanel = new System.Windows.Forms.Panel();
+			this.MenuStrip.SuspendLayout();
 			this.SuspendLayout();
 			// 
-			// label1
+			// MenuStrip
 			// 
-			this.label1.Location = new System.Drawing.Point(30, 60);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(100, 30);
-			this.label1.TabIndex = 0;
-			this.label1.Text = "Location";
-			this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.MenuStrip.Font = new System.Drawing.Font("Consolas", 14F);
+			this.MenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.FileToolStripMenuItem,
+            this.viewsToolStripMenuItem,
+            this.helpToolStripMenuItem});
+			this.MenuStrip.Location = new System.Drawing.Point(0, 0);
+			this.MenuStrip.Name = "MenuStrip";
+			this.MenuStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+			this.MenuStrip.Size = new System.Drawing.Size(634, 30);
+			this.MenuStrip.TabIndex = 8;
+			this.MenuStrip.Text = "MenuStrip";
 			// 
-			// LocationTextBox
+			// FileToolStripMenuItem
 			// 
-			this.LocationTextBox.AllowDrop = true;
-			this.LocationTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.LocationTextBox.BackColor = System.Drawing.SystemColors.Window;
-			this.LocationTextBox.Location = new System.Drawing.Point(150, 60);
-			this.LocationTextBox.Name = "LocationTextBox";
-			this.LocationTextBox.ReadOnly = true;
-			this.LocationTextBox.Size = new System.Drawing.Size(365, 30);
-			this.LocationTextBox.TabIndex = 1;
-			this.LocationTextBox.DragDrop += new System.Windows.Forms.DragEventHandler(this.LocationTextBox_DragDrop);
-			this.LocationTextBox.DragEnter += new System.Windows.Forms.DragEventHandler(this.LocationTextBox_DragEnter);
+			this.FileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.hashFileToolStripMenuItem,
+            this.compareToolStripMenuItem});
+			this.FileToolStripMenuItem.Name = "FileToolStripMenuItem";
+			this.FileToolStripMenuItem.Size = new System.Drawing.Size(62, 26);
+			this.FileToolStripMenuItem.Text = "File";
 			// 
-			// OpenFileButton
+			// hashFileToolStripMenuItem
 			// 
-			this.OpenFileButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.OpenFileButton.Image = global::CSharpChecksum.Properties.Resources.icons8_opened_folder_filled_32;
-			this.OpenFileButton.Location = new System.Drawing.Point(520, 59);
-			this.OpenFileButton.Name = "OpenFileButton";
-			this.OpenFileButton.Size = new System.Drawing.Size(40, 32);
-			this.OpenFileButton.TabIndex = 2;
-			this.OpenFileButton.UseVisualStyleBackColor = true;
-			this.OpenFileButton.Click += new System.EventHandler(this.OpenFileButton_Click);
+			this.hashFileToolStripMenuItem.Name = "hashFileToolStripMenuItem";
+			this.hashFileToolStripMenuItem.Size = new System.Drawing.Size(170, 26);
+			this.hashFileToolStripMenuItem.Text = "Hash file";
+			this.hashFileToolStripMenuItem.Click += new System.EventHandler(this.hashFileToolStripMenuItem_Click);
 			// 
-			// HashFunctionComboBox
+			// compareToolStripMenuItem
 			// 
-			this.HashFunctionComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.HashFunctionComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-			this.HashFunctionComboBox.FormattingEnabled = true;
-			this.HashFunctionComboBox.Location = new System.Drawing.Point(150, 120);
-			this.HashFunctionComboBox.Name = "HashFunctionComboBox";
-			this.HashFunctionComboBox.Size = new System.Drawing.Size(240, 30);
-			this.HashFunctionComboBox.TabIndex = 3;
+			this.compareToolStripMenuItem.Name = "compareToolStripMenuItem";
+			this.compareToolStripMenuItem.Size = new System.Drawing.Size(170, 26);
+			this.compareToolStripMenuItem.Text = "Compare";
+			this.compareToolStripMenuItem.Click += new System.EventHandler(this.compareToolStripMenuItem_Click);
 			// 
-			// label2
+			// viewsToolStripMenuItem
 			// 
-			this.label2.Location = new System.Drawing.Point(30, 120);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(100, 30);
-			this.label2.TabIndex = 4;
-			this.label2.Text = "Hash";
-			this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.viewsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.settingToolStripMenuItem});
+			this.viewsToolStripMenuItem.Name = "viewsToolStripMenuItem";
+			this.viewsToolStripMenuItem.Size = new System.Drawing.Size(72, 26);
+			this.viewsToolStripMenuItem.Text = "Views";
 			// 
-			// HashFileButton
+			// settingToolStripMenuItem
 			// 
-			this.HashFileButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.HashFileButton.Location = new System.Drawing.Point(400, 119);
-			this.HashFileButton.Name = "HashFileButton";
-			this.HashFileButton.Size = new System.Drawing.Size(160, 30);
-			this.HashFileButton.TabIndex = 4;
-			this.HashFileButton.Text = "Hash File";
-			this.HashFileButton.UseVisualStyleBackColor = true;
-			this.HashFileButton.Click += new System.EventHandler(this.HashFileButton_Click);
+			this.settingToolStripMenuItem.Name = "settingToolStripMenuItem";
+			this.settingToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+			this.settingToolStripMenuItem.Text = "Settings";
+			this.settingToolStripMenuItem.Click += new System.EventHandler(this.settingToolStripMenuItem_Click);
 			// 
-			// HashValueTextBox
+			// helpToolStripMenuItem
 			// 
-			this.HashValueTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.HashValueTextBox.BackColor = System.Drawing.SystemColors.Window;
-			this.HashValueTextBox.Location = new System.Drawing.Point(30, 170);
-			this.HashValueTextBox.Multiline = true;
-			this.HashValueTextBox.Name = "HashValueTextBox";
-			this.HashValueTextBox.ReadOnly = true;
-			this.HashValueTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-			this.HashValueTextBox.Size = new System.Drawing.Size(360, 72);
-			this.HashValueTextBox.TabIndex = 5;
+			this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aboutToolStripMenuItem});
+			this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+			this.helpToolStripMenuItem.Size = new System.Drawing.Size(62, 26);
+			this.helpToolStripMenuItem.Text = "Help";
 			// 
-			// CopyButton
+			// aboutToolStripMenuItem
 			// 
-			this.CopyButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.CopyButton.Location = new System.Drawing.Point(400, 212);
-			this.CopyButton.Name = "CopyButton";
-			this.CopyButton.Size = new System.Drawing.Size(160, 30);
-			this.CopyButton.TabIndex = 6;
-			this.CopyButton.Text = "Copy";
-			this.CopyButton.UseVisualStyleBackColor = true;
-			this.CopyButton.Click += new System.EventHandler(this.CopyButton_Click);
+			this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+			this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+			this.aboutToolStripMenuItem.Text = "About";
+			// 
+			// MainPanel
+			// 
+			this.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.MainPanel.Location = new System.Drawing.Point(0, 30);
+			this.MainPanel.Name = "MainPanel";
+			this.MainPanel.Size = new System.Drawing.Size(634, 281);
+			this.MainPanel.TabIndex = 10;
 			// 
 			// ChecksumForm
 			// 
+			this.AllowDrop = true;
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-			this.ClientSize = new System.Drawing.Size(584, 261);
-			this.Controls.Add(this.CopyButton);
-			this.Controls.Add(this.HashValueTextBox);
-			this.Controls.Add(this.HashFileButton);
-			this.Controls.Add(this.label2);
-			this.Controls.Add(this.HashFunctionComboBox);
-			this.Controls.Add(this.OpenFileButton);
-			this.Controls.Add(this.LocationTextBox);
-			this.Controls.Add(this.label1);
+			this.ClientSize = new System.Drawing.Size(634, 311);
+			this.Controls.Add(this.MainPanel);
+			this.Controls.Add(this.MenuStrip);
 			this.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-			this.MinimumSize = new System.Drawing.Size(600, 300);
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+			this.MainMenuStrip = this.MenuStrip;
+			this.Margin = new System.Windows.Forms.Padding(5);
+			this.MinimumSize = new System.Drawing.Size(650, 350);
 			this.Name = "ChecksumForm";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-			this.Text = "ChecksumForm";
+			this.Text = "Checksum";
 			this.Load += new System.EventHandler(this.ChecksumForm_Load);
+			this.MenuStrip.ResumeLayout(false);
+			this.MenuStrip.PerformLayout();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
 		}
 
 		#endregion
-
-		private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.TextBox LocationTextBox;
-		private System.Windows.Forms.Button OpenFileButton;
-		private System.Windows.Forms.ComboBox HashFunctionComboBox;
-		private System.Windows.Forms.Label label2;
-		private System.Windows.Forms.Button HashFileButton;
-		private System.Windows.Forms.TextBox HashValueTextBox;
-		private System.Windows.Forms.Button CopyButton;
+		private System.Windows.Forms.MenuStrip MenuStrip;
+		private System.Windows.Forms.ToolStripMenuItem FileToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem compareToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem viewsToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem settingToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+		private System.Windows.Forms.Panel MainPanel;
+		private System.Windows.Forms.ToolStripMenuItem hashFileToolStripMenuItem;
 	}
 }

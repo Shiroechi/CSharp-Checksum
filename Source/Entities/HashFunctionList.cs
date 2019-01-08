@@ -126,5 +126,40 @@ namespace CSharpChecksum.Entities
 
 			return buffer;
 		}
+
+		public static string HashFileExtension(string hash_function)
+		{
+			string extension;
+
+			switch (hash_function)
+			{
+				case "Blake2b - 256 bit":
+					extension = ".blake2b256";
+					break;
+				case "Blake2b - 512 bit":
+					extension = ".blake2b512";
+					break;
+				case "SHA-1":
+					extension = ".sha1";
+					break;
+				case "SHA-2 256 bit":
+					extension = ".sha2-256";
+					break;
+				case "SHA-2 512 bit":
+					extension = ".sha2-512";
+					break;
+				case "SHA-3 256 bit":
+					extension = ".sha3-256";
+					break;
+				case "SHA-3 512 bit":
+					extension = ".sha3-512";
+					break;
+				default:
+					extension = ".sha1";
+					break;
+			}
+
+			return extension;
+		}
 	}
 }
