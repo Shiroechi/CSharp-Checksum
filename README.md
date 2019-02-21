@@ -12,6 +12,11 @@ there's a limit to the size of file to hash, you can change it in the [code](htt
 * [SHA-3](https://en.wikipedia.org/wiki/SHA-3)
 * [Blake2b](https://en.wikipedia.org/wiki/BLAKE_(hash_function))
 
+## Existing Feature
+* Hash single file
+* Compare file with hash value
+* Save hash value to a file
+
 ## Getting Started
 
 ### Prerequisites
@@ -19,7 +24,7 @@ Before build this project you need to add reference:
 * [Portable.BouncyCastle](https://www.nuget.org/packages/Portable.BouncyCastle/)
 
 ## To do
-* compare file with hash value
+* Compare file with hash value from text file
 * more hash function
 * hash multiple file
 
