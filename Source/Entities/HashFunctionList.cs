@@ -42,6 +42,7 @@ namespace CSharpChecksum.Entities
 			byte[] result = new byte[hash.GetDigestSize()];
 			hash.BlockUpdate(data, 0, data.Length);
 			hash.DoFinal(result, 0);
+			Array.Clear(data, 0, data.Length);
 			return ByteArrayToHexString(result);
 		}
 		
@@ -58,7 +59,7 @@ namespace CSharpChecksum.Entities
 			return list;
 		}
 
-		private static string ByteArrayToHexString(byte[] Bytes)
+		public static string ByteArrayToHexString(byte[] Bytes)
 		{
 			StringBuilder Result = new StringBuilder(Bytes.Length * 2);
 			string HexAlphabet = "0123456789ABCDEF";

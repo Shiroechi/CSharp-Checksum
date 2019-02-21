@@ -28,20 +28,23 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.label1 = new System.Windows.Forms.Label();
+			this.LimitSizeLabel = new System.Windows.Forms.Label();
 			this.SaveButton = new System.Windows.Forms.Button();
 			this.LimitSizeValue = new System.Windows.Forms.NumericUpDown();
+			this.BlockSizeLabel = new System.Windows.Forms.Label();
+			this.BlockSizeValue = new System.Windows.Forms.NumericUpDown();
 			((System.ComponentModel.ISupportInitialize)(this.LimitSizeValue)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.BlockSizeValue)).BeginInit();
 			this.SuspendLayout();
 			// 
-			// label1
+			// LimitSizeLabel
 			// 
-			this.label1.Location = new System.Drawing.Point(30, 30);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(200, 30);
-			this.label1.TabIndex = 0;
-			this.label1.Text = "Limit size (MB)";
-			this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.LimitSizeLabel.Location = new System.Drawing.Point(30, 30);
+			this.LimitSizeLabel.Name = "LimitSizeLabel";
+			this.LimitSizeLabel.Size = new System.Drawing.Size(200, 30);
+			this.LimitSizeLabel.TabIndex = 0;
+			this.LimitSizeLabel.Text = "Limit size (MB)";
+			this.LimitSizeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// SaveButton
 			// 
@@ -76,25 +79,63 @@
             0,
             0});
 			// 
+			// BlockSizeLabel
+			// 
+			this.BlockSizeLabel.Location = new System.Drawing.Point(30, 70);
+			this.BlockSizeLabel.Name = "BlockSizeLabel";
+			this.BlockSizeLabel.Size = new System.Drawing.Size(200, 30);
+			this.BlockSizeLabel.TabIndex = 0;
+			this.BlockSizeLabel.Text = "Block size (B)";
+			this.BlockSizeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
+			// BlockSizeValue
+			// 
+			this.BlockSizeValue.Enabled = false;
+			this.BlockSizeValue.Font = new System.Drawing.Font("Consolas", 14.25F);
+			this.BlockSizeValue.Location = new System.Drawing.Point(250, 70);
+			this.BlockSizeValue.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+			this.BlockSizeValue.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+			this.BlockSizeValue.Name = "BlockSizeValue";
+			this.BlockSizeValue.Size = new System.Drawing.Size(120, 30);
+			this.BlockSizeValue.TabIndex = 1;
+			this.BlockSizeValue.Value = new decimal(new int[] {
+            4096,
+            0,
+            0,
+            0});
+			// 
 			// SettingsControl
 			// 
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+			this.Controls.Add(this.BlockSizeValue);
 			this.Controls.Add(this.LimitSizeValue);
+			this.Controls.Add(this.BlockSizeLabel);
 			this.Controls.Add(this.SaveButton);
-			this.Controls.Add(this.label1);
+			this.Controls.Add(this.LimitSizeLabel);
 			this.Font = new System.Drawing.Font("Consolas", 14F);
 			this.Name = "SettingsControl";
 			this.Size = new System.Drawing.Size(634, 281);
 			this.Load += new System.EventHandler(this.SettingsControl_Load);
 			((System.ComponentModel.ISupportInitialize)(this.LimitSizeValue)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.BlockSizeValue)).EndInit();
 			this.ResumeLayout(false);
 
 		}
 
 		#endregion
 
-		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.Label LimitSizeLabel;
 		private System.Windows.Forms.Button SaveButton;
 		private System.Windows.Forms.NumericUpDown LimitSizeValue;
+		private System.Windows.Forms.Label BlockSizeLabel;
+		private System.Windows.Forms.NumericUpDown BlockSizeValue;
 	}
 }
