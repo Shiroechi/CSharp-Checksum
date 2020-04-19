@@ -2,11 +2,11 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="CSharpChecksum.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="DefaultMultiplier" Type="System.Int32" Scope="Application">
-      <Value Profile="(Default)">1048576</Value>
-    </Setting>
-    <Setting Name="LimitSize" Type="System.Int64" Scope="User">
+    <Setting Name="LimitSize" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">100</Value>
+    </Setting>
+    <Setting Name="BlockSize" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">4096</Value>
     </Setting>
   </Settings>
 </SettingsFile>

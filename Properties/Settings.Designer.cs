@@ -12,7 +12,7 @@ namespace CSharpChecksum.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.9.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.5.0.0")]
     public sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -23,24 +23,27 @@ namespace CSharpChecksum.Properties {
             }
         }
         
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("1048576")]
-        public int DefaultMultiplier {
+        [global::System.Configuration.DefaultSettingValueAttribute("100")]
+        public int LimitSize {
             get {
-                return ((int)(this["DefaultMultiplier"]));
+                return ((int)(this["LimitSize"]));
+            }
+            set {
+                this["LimitSize"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("100")]
-        public long LimitSize {
+        [global::System.Configuration.DefaultSettingValueAttribute("4096")]
+        public int BlockSize {
             get {
-                return ((long)(this["LimitSize"]));
+                return ((int)(this["BlockSize"]));
             }
             set {
-                this["LimitSize"] = value;
+                this["BlockSize"] = value;
             }
         }
     }

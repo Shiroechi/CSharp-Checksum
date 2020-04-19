@@ -1,9 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
-using CSharpChecksum.Forms;
-
-namespace Checksum
+namespace CSharpChecksum
 {
 	static class Program
 	{
@@ -15,7 +16,7 @@ namespace Checksum
 		{
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			Application.Run(new ChecksumForm());
+			Application.Run(new CSharpChecksum.Forms.ChecksumForm());
 		}
 	}
 }
