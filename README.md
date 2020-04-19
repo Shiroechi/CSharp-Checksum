@@ -2,7 +2,7 @@
 
 A simple file checksum for windows using [Portable.BouncyCastle](https://github.com/onovotny/bc-csharp) for hash function.
 
-there's a limit to the size of file to hash, you can change it in the [code](https://github.com/Shiroechi/CSharp-Checksum/blob/3a5ef69f0385abc0363187a3f9918714ff77578c/Source/Forms/ChecksumForm.cs#L8).
+there's a limit to the size of file to hash, you can change it in the aplication setting.
 
 **remember the bigger the file size the slower it is**
 
@@ -16,6 +16,7 @@ there's a limit to the size of file to hash, you can change it in the [code](htt
 * Hash single file
 * Compare file with hash value
 * Save hash value to a file
+* cancel the currently running hash process
 
 ## Getting Started
 
@@ -29,7 +30,7 @@ Before build this project you need to add reference:
 * hash multiple file
 
 ## Build with
-* [Visual Studio 2017 build 15.9](https://visualstudio.microsoft.com/downloads/)
+* [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/)
 
 ## Credits
 Thanks to [Portable.BouncyCastle](https://github.com/onovotny/bc-csharp)
