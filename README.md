@@ -1,8 +1,8 @@
-# CSharp Checksum [![CodeFactor](https://www.codefactor.io/repository/github/shiroechi/csharp-checksum/badge/master)](https://www.codefactor.io/repository/github/shiroechi/csharp-checksum/overview/master)
+# CSharp Checksum [![CodeFactor](https://www.codefactor.io/repository/github/shiroechi/csharp-checksum/badge)](https://www.codefactor.io/repository/github/shiroechi/csharp-checksum)
 
 A simple file checksum for windows using [Portable.BouncyCastle](https://github.com/onovotny/bc-csharp) for hash function.
 
-there's a limit to the size of file to hash, you can change it in the aplication setting.
+There's a limit to the size of file to hash, you can change it in the aplication setting.
 
 **remember the bigger the file size the slower it is**
 
@@ -16,7 +16,7 @@ there's a limit to the size of file to hash, you can change it in the aplication
 * Hash single file
 * Compare file with hash value
 * Save hash value to a file
-* cancel the currently running hash process
+* Cancel the currently running hash process
 
 ## Getting Started
 
@@ -26,8 +26,8 @@ Before build this project you need to add reference:
 
 ## To do
 * Compare file with hash value from text file
-* more hash function
-* hash multiple file
+* More hash function
+* Hash multiple file
 
 ## Build with
 * [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/)
