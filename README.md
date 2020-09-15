@@ -1,5 +1,8 @@
 # CSharp Checksum [![CodeFactor](https://www.codefactor.io/repository/github/shiroechi/csharp-checksum/badge)](https://www.codefactor.io/repository/github/shiroechi/csharp-checksum)
 
+**NOTICE**
+because some mistake when i try github desktop, this repo will archived and i will create new repo for this.
+
 A simple file checksum for windows using [Portable.BouncyCastle](https://github.com/onovotny/bc-csharp) for hash function.
 
 There's a limit to the size of file to hash, you can change it in the aplication setting.
